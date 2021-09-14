@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'com.leonid'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.javalin:javalin:3.13.11'
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.10.5'
+    implementation group: 'org.thymeleaf', name: 'thymeleaf', version: '3.0.0.RELEASE'
+    implementation "org.slf4j:slf4j-simple:1.7.30"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
+}
+
+test {
+    useJUnitPlatform()
+}
